@@ -1,0 +1,51 @@
+body {
+  background-color: #f2f4f5;
+  margin: 0;
+}
+
+main {
+  width: 70%;
+  display: table;
+  margin: 100px auto 0 auto; /*Sempre no sentido horário: Top Right Botton Left.*/
+}
+
+.card-container {
+  width: 270px;
+  display: table;
+  /* border: 10px;
+  border-color: green; */
+}
+
+.card {
+  width: 100%;
+  display: table;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+}
+
+/* .card img {  evitar usar tags genéricas. Pode gerar erros quando reaproveitamos o código
+} */
+
+.card .card-image {
+  /*Usar sempre classes específicas*/
+  /* border: 8px solid yellow; */
+  border-radius: 6px;
+  display: block;
+  /*Sempre colocar um sisplay block ou inline-block nas imagnes. Motivo: retirar espaçamentos indevidos.NÃO PERCEBI DIFERENÇA*/
+  /* margin: 15px;  */
+  /*Equivale a margin: 15px 15px 15px 15px.  Não usar desta forma (com margem fixa), pois se tamnho do card mudar ficará fora do centro.*/
+
+  /*Para tornar tamanho da imagem responsivo*/
+  /* margin: 15px auto; depois do padding no card, só precisa margin-bottom*/
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 100%; /*Para compatibilidade alguns browsers. Se imagem for maior, ocupár no máximo 100% ????*/
+  height: auto;
+  /*Para tornar tamanho da imagem responsivo*/
+  /*As margens laterais somem, pois a imagem está ocupando 100% do card. 
+  Se forçar uma magem fixa ao invés de auto, imagem pode sair do card. Ficar maior que o card.
+  Para resolver, colocar um padding na div pai (card)*/
+  box-sizing: border-box; /*o card tinha 270 pix, depois do padding de 15 px passou a ter 300px. Como queremos 270px, o box-sizing força o padding a ser interno ao card.*/
+}
