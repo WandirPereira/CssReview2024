@@ -12,8 +12,8 @@ main {
 .card-container {
   width: 270px;
   display: table;
-  /* border: 10px;
-  border-color: green; */
+  float: left;
+  margin: 60px 60px 0 0;
 }
 
 .card {
@@ -23,6 +23,7 @@ main {
   border-radius: 8px;
   box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
   padding: 15px;
+  box-sizing: border-box; /*o card tinha 270 pix, depois do padding de 15 px passou a ter 300px. Como queremos 270px, o box-sizing força o padding a ser interno ao card.*/
 }
 
 /* .card img {  evitar usar tags genéricas. Pode gerar erros quando reaproveitamos o código
@@ -39,7 +40,7 @@ main {
 
   /*Para tornar tamanho da imagem responsivo*/
   /* margin: 15px auto; depois do padding no card, só precisa margin-bottom*/
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   width: 100%;
   max-width: 100%; /*Para compatibilidade alguns browsers. Se imagem for maior, ocupár no máximo 100% ????*/
   height: auto;
@@ -47,5 +48,68 @@ main {
   /*As margens laterais somem, pois a imagem está ocupando 100% do card. 
   Se forçar uma magem fixa ao invés de auto, imagem pode sair do card. Ficar maior que o card.
   Para resolver, colocar um padding na div pai (card)*/
-  box-sizing: border-box; /*o card tinha 270 pix, depois do padding de 15 px passou a ter 300px. Como queremos 270px, o box-sizing força o padding a ser interno ao card.*/
+  /*colocar box-sizing no card */
+}
+
+.card .card-image-shift {
+  margin-top: -55px;
+}
+
+/*OU*/
+
+/* .card .card-image-shift {
+  position: relative;
+  top: -55px;
+  margin-bottom: -55px;
+} */
+
+.card .card-body {
+  width: 100%;
+  display: table;
+}
+
+.card .card-body h1 {
+  font-family: Arial Black, Helvetica, sans-serif; /*Arial Black não é uma safe color*/
+  font-size: 21px;
+  /* font-weight: 800; pesos da fonte - negrito - Retirada, porque a fonte foi alterada de arial para arial black*/
+  line-height: 24px; /*altura da linha. texto ficará centralizado em uma linha de 24px de altura*/
+  color: #9013fe;
+  margin: 0;
+}
+
+.card .card-body p {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #4a4a4a;
+  font-weight: 800;
+  margin: 15px 0 12px 0;
+}
+
+.card .card-footer {
+  width: 100%;
+  display: table;
+}
+
+.card .card-footer .btn {
+  width: 100%;
+}
+
+.btn {
+  width: auto;
+  height: 40px;
+  display: inline-block; /*se não tiver display, não consegue colocar o valor de height. Com block, botão irá ocupar 100%. Com inline-block, só ocupa o tamanho do texto*/
+  background-color: #39e493;
+  color: white;
+  font-family: Arial Black, Helvetica, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase; /*Coloca o text em letras maiúsculas*/
+  line-height: 40px;
+  text-decoration: none; /*Retirar o underline da âncora <a>*/
+  text-align: center;
+  margin-top: 13px;
+  padding: 0 30px; /*com qualquer tamanho de texto, irá manter o padding de 30px na horizontal (esquerda e direita)*/
+  border-radius: 4px;
+  box-sizing: border-box; /*Impedir que botão seja maior que o card*/
 }
