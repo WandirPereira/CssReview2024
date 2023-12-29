@@ -22,46 +22,6 @@
   align-content: center;
 }
 
-.my-container-2 {
-  display: flex;
-  width: 80%;
-  height: 200px;
-  margin: 60px auto;
-  background-color: #8a00cf;
-  border-radius: 8px;
-
-  /* flex-direction: row;
-  flex-wrap: wrap;  */
-  /*permite mudar de linha se não couber.*/
-
-  /*OU*/
-  flex-flow: row nowrap;
-
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-}
-
-.my-container-3 {
-  display: flex;
-  width: 80%;
-  height: 200px;
-  margin: 60px auto;
-  background-color: #8a00cf;
-  border-radius: 8px;
-
-  /* flex-direction: row;
-  flex-wrap: wrap;  */
-  /*permite mudar de linha se não couber.*/
-
-  /*OU*/
-  flex-flow: row wrap;
-
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-}
-
 .my-item {
   height: 50px;
   background-color: #21f8bb;

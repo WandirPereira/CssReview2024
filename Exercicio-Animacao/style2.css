@@ -1,0 +1,33 @@
+@keyframes myBoxAnim {
+  from {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+  }
+  to {
+    width: 400px;
+    height: 100px;
+    background-color: red;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 80%;
+  height: 800px;
+  display: table;
+  background-color: #c3c5c6;
+  margin: 100px auto;
+}
+
+.quadrado {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  transition: all 3s ease-in;
+  animation: myBoxAnim 3s infinite;
+}
